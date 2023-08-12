@@ -19,7 +19,7 @@ function RpcProviderExample() {
       resetJWT()
   }, [])
 
-  const setWallet = async (provider) => {
+  const setWallet = async (provider: any) => {
       const signer = getZeroDevSigner({
         projectId: defaultProjectId,
         owner: await getRPCProviderOwner(provider)
@@ -45,7 +45,7 @@ const disconnect = async () => {
 
 const handleClick = async () => {
   setLoading(true)
-  zeroDevWeb3Auth.connect('jwt', {jwt}).then((provider) => {
+  zeroDevWeb3Auth.connect('jwt', {jwt}).then((provider: any) => {
     setWallet(provider)
   }).finally(() => {
     setLoading(false)
@@ -70,6 +70,14 @@ return (
 )
 }
 
-function getZeroDevSigner({ owne:any }) {
+function getZeroDevSigner({ }) {
   throw new Error('Function not implemented.')
 }
+function getRPCProviderOwner(provider: any) {
+  throw new Error('Function not implemented.')
+}
+
+function useMemo(arg0: () => any, arg1: never[]) {
+  throw new Error('Function not implemented.')
+}
+

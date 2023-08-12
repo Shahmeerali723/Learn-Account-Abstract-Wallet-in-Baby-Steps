@@ -19,7 +19,7 @@ function RpcProviderExample() {
       resetJWT()
   }, [])
 
-  const setWallet = async (provider: any) => {
+  const setWallet = async (provider) => {
       const signer = getZeroDevSigner({
         projectId: defaultProjectId,
         owner: await getRPCProviderOwner(provider)

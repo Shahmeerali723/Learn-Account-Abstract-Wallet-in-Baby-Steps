@@ -45,7 +45,7 @@ const disconnect = async () => {
 
 const handleClick = async () => {
   setLoading(true)
-  zeroDevWeb3Auth.connect('jwt', {jwt}).then((provider: any) => {
+  zeroDevWeb3Auth.connect('jwt', {jwt}).then((provider) => {
     setWallet(provider)
   }).finally(() => {
     setLoading(false)
@@ -70,6 +70,6 @@ return (
 )
 }
 
-function getZeroDevSigner(arg0: { projectId: any; owner: any }) {
+function getZeroDevSigner({ owne:any }) {
   throw new Error('Function not implemented.')
 }
